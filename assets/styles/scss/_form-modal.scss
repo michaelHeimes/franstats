@@ -1,0 +1,58 @@
+.form-modal {
+	
+	h1 {
+		margin-bottom: 0.8em;
+	}
+	
+	.gform_wrapper.gravity-theme .gfield-choice-input+label {
+		font-size: rem-calc(20);
+	}
+	
+	.gfield-choice-input {
+		margin: 0;
+	}
+	
+	.name_first,
+	.name_last,
+	.gfield {
+		position: relative;
+		margin-top: 2.555rem;
+	}
+	
+	.gform_wrapper.gravity-theme .ginput_complex label,
+	.gform_wrapper.gravity-theme .ginput_complex legend,
+	.gform_wrapper.gravity-theme .gfield_label {
+		position: absolute;
+		bottom: 53px;
+		font-size: rem-calc(26);
+		font-weight: 400;
+		margin: 0;
+		transform: translate(22px, 51px);
+		transition: all .2s ease;
+	}
+	
+	[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {
+		height: 3.125rem;
+		background-color: $light-gray;
+	}
+	
+	.focused {
+
+		label {
+			font-size: rem-calc(20) !important;
+			transform: translate(0, 0) !important;
+		}
+		
+	}
+	
+	.gform_footer.top_label {
+		padding-top: 1.5rem;
+    	text-align: center;
+    	
+    	.button {
+			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+    	}
+    	
+	}
+	
+}

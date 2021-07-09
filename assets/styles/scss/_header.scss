@@ -1,0 +1,18 @@
+header.header {
+	.top-bar {
+		.top-bar-left {
+			li.header-logo {
+				a {
+					padding: 0;
+				}
+			}
+		}
+		.top-bar-right {
+			.utility-nav {
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}
