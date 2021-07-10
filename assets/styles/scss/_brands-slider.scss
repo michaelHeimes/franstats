@@ -1,0 +1,51 @@
+.brands-slider {
+	padding-top: 2.21875rem;
+	padding-bottom: 2.21875rem;
+	
+	.brand-slider {
+		padding-top: 1.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		
+		@include breakpoint(large) {
+			padding-left: 0;
+			padding-right: 0;			
+		}
+		
+		button.slick-arrow {
+// 			font-size: 0;
+			width: 13px;
+			height: 30px;
+		    position: absolute;
+		    z-index: 2;
+		    top: 50%;
+		    transform: translateY(-50%);
+			background-repeat: no-repeat;
+
+		&.slick-prev {
+			left: 0;
+			
+			@include breakpoint(large) {
+				left: -1rem;
+			}
+		}
+		    
+		&.slick-next {
+			right: 0;
+			
+			@include breakpoint(large) {
+				right: -1rem;
+			}
+			
+		}
+		    
+		}
+				
+		.single-logo {
+			margin: 0 16px;
+		}	 
+	}
+	
+}
+
+

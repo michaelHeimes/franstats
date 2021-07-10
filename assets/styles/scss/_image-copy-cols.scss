@@ -1,0 +1,35 @@
+.image-copy-cols {
+	padding-top: 1.7rem;
+	padding-bottom: 1.85rem;
+	
+	@include breakpoint (medium) {
+		padding-top: 5.1rem;
+		padding-bottom: 2.8125rem;
+	}
+	
+	h2 {
+		margin-bottom: .75em;
+		
+		span {
+			display: block;
+			
+		&.small {
+			font-size: rem-calc(26);
+			font-weight: 400;
+			text-transform: none;
+		}
+			
+		}
+		
+	}
+	
+	.left {
+		margin-bottom: 1.7rem;
+		
+		@include breakpoint(tablet) {
+			margin-bottom: 0;
+		}
+		
+	}
+	
+}

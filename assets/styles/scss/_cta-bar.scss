@@ -1,0 +1,31 @@
+.cta-bar {
+	padding-bottom: 1.5rem;
+	
+	.inner {
+		background-color: $brand-secondary;
+		padding-top: 1.025rem;
+	    padding-bottom: 1.1rem;
+		
+		button {
+		
+			span {
+				text-decoration: underline;
+				color: $white;
+			}
+
+		}
+		
+	&.large {
+		padding-top: 1.85rem;
+		padding-bottom: 1.58rem;
+		
+		span {
+			font-size: rem-calc(24);
+		}
+		
+	}
+		
+		
+	}
+	
+}

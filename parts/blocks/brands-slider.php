@@ -26,7 +26,7 @@ if( !empty($block['align']) ) {
 
 // Load values and assign defaults.
 $heading = get_field('heading') ?: '';
-$copy = get_field('text') ?: '';
+$copy = get_field('copy') ?: '';
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
@@ -36,6 +36,7 @@ $copy = get_field('text') ?: '';
 			
 			<div class="cell small-12">
 				<h2 class="text-center"><?php echo $heading; ?></h2>
+				<p class="text-center"><?php echo $copy;?></p>
 			</div>
 
 		</div>

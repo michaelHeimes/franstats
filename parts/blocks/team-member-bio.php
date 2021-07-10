@@ -1,7 +1,7 @@
 <?php
 
 /**
- * brands-slider Block Template.
+ * team-member-bio Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -10,13 +10,13 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'cta-bar-' . $block['id'];
+$id = 'team-member-bio-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'cta-bar';
+$className = 'team-member-bio';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -25,24 +25,32 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
-$button_text = get_field('button_text') ?: '';
-$text_size = get_field('text_size') ?: '';
+$heading = get_field('heading') ?: '';
+$copy = get_field('copy') ?: '';
+$photo = get_field('photo') ?: '';
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-	<div class="inner <?php echo $text_size;?>">
+	<div class="inner">
 
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x">
+			<div class="grid-x grid-padding-x flex-dir-column tablet-flex-dir-row-reverse">
 				
-				<div class="cell small-12 text-center">
+				<div class="right cell small-12 medium-4 tablet-4">
 					
-					<button type="button" class="text-center" data-open="try-modal"><span><?php echo $button_text;?></span></button>
+					<div class="img-wrap">
+						<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+					</div>
 					
+				</div>
+				
+				<div class="copy-wrap cell small-12 medium-auto tablet-8">
+					<h2 class="h3"><?php echo $heading;?></h2>
+					<div><?php echo $copy;?></div>
 				</div>
 	
 			</div>
 			
 		</div>
-		
+	
 	</div>
 </div>

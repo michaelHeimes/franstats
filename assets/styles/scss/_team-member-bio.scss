@@ -1,0 +1,44 @@
+.team-member-bio {
+	padding-top: 5em;
+	padding-bottom: 1.1rem;
+
+	@include breakpoint(medium) {
+		padding-top: 2em;
+		padding-bottom: 1.1rem;		
+	}
+	
+	.inner {
+		padding-top: 2.3rem;
+		padding-bottom: 1.1rem;
+		background: linear-gradient(180deg, #A5CEE9 0%, #AEDEFA 50%);
+		
+		.img-wrap {
+			max-width: 320px;
+			border: 3px solid $brand-secondary;
+			border-radius: 100%;
+			overflow: hidden;
+			margin: -4.9rem auto 2.55rem;
+			
+			@include breakpoint(medium) {
+				margin: -3.75rem  0 0;
+			}
+			
+		}
+		
+		.copy-wrap {
+			h2 {
+				text-transform: none;
+				margin-bottom: 1.55em;
+			}
+			
+		}
+		
+	}
+	
+	.right {
+		@include breakpoint(xlarge) {
+			margin-right: -6.75rem;
+		}
+	}
+	
+}

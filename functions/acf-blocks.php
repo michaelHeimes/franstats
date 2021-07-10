@@ -17,6 +17,16 @@ function my_acf_init_block_types() {
         ));
 
         acf_register_block_type(array(
+            'name'              => 'image-copy-cols',
+            'title'             => __('Image and Copy Columns'),
+            'description'       => __('A custom Image and Copy Columns block.'),
+            'render_template'   => 'parts/blocks/image-copy-cols.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'image', 'copy', 'columns' ),
+        ));
+
+        acf_register_block_type(array(
             'name'              => 'price-cards',
             'title'             => __('Price Cards'),
             'description'       => __('A custom banner block.'),
@@ -44,6 +54,36 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'cta', 'bar' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'testimonials',
+            'title'             => __('Testimonials'),
+            'description'       => __('A custom testimonials block.'),
+            'render_template'   => 'parts/blocks/testimonials.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'testimonial', 'quote' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'team-member-bio',
+            'title'             => __('Team Member Bio'),
+            'description'       => __('A custom team-member-bio block.'),
+            'render_template'   => 'parts/blocks/team-member-bio.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'team', 'member', 'bio' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'faqs',
+            'title'             => __('FAQs'),
+            'description'       => __('A custom FAQs block.'),
+            'render_template'   => 'parts/blocks/faqs.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'faqs', 'frequently', 'asked', 'questions' ),
         ));
         
     }

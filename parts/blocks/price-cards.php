@@ -11,9 +11,11 @@
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'price-cards-' . $block['id'];
-if( !empty($block['anchor']) ) {
-    $id = $block['anchor'];
+/*
+if( !empty($block['data']['anchor']) ) {
+    $id = $block['data']['anchor'];
 }
+*/
 
 // Create class attribute allowing for custom "className" and "align" values.
 $className = 'price-cards';
@@ -27,10 +29,11 @@ if( !empty($block['align']) ) {
 // Load values and assign defaults.
 $heading = get_field('heading') ?: '';
 $post_cards_text = get_field('post_cards_copy') ?: '';
+$anchor_link = get_field('anchor') ?: '';
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-
+	<div id="<?php echo $anchor_link;?>" class="anchor-link"></div>
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			
@@ -42,7 +45,7 @@ $post_cards_text = get_field('post_cards_copy') ?: '';
 		
 		<?php $cards_num = count(get_field('cards'));?>
 			
-		<div class="cards-wrap grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-<?php echo $cards_num;?>">
+		<div class="cards-wrap number-of-cards-<?php echo $cards_num;?> grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-<?php echo $cards_num;?>" data-equalizer data-equalize-on="medium">
 			
 			<?php if( have_rows('cards') ):?>
 				<?php while ( have_rows('cards') ) : the_row();?>
@@ -51,19 +54,27 @@ $post_cards_text = get_field('post_cards_copy') ?: '';
 					<?php while ( have_rows('single_card') ) : the_row();?>	
 						
 					<div class="single-card cell text-center">
+						<div class="inner" data-equalizer-watch>
+							<div class="shadow"></div>
+							<div class="center-bg"></div>
 						
-						<h3><?php the_sub_field('title');?></h3>
+							<div class="top">
 						
-						<div class="sub-title"><?php the_sub_field('sub-title');?></div>
-
-						<div class="sub-title"><?php the_sub_field('price');?></div>
-
-						<div class="sub-title"><?php the_sub_field('term');?></div>
-
-						<div class="btn-wrap">
-							<button type="button" class="button light-gray" data-open="try-modal"><?php the_sub_field('button_text');?></button>
-						</div>
+								<h3><?php the_sub_field('title');?></h3>
+								
+								<div class="sub-title"><?php the_sub_field('sub-title');?></div>
+		
+								<div class="price"><?php the_sub_field('price');?></div>
+		
+								<div class="terms"><?php the_sub_field('term');?></div>
+							
+							</div>
+	
+							<div class="btn-wrap">
+								<button type="button" class="button white" data-open="try-modal"><?php the_sub_field('button_text');?></button>
+							</div>
 						
+						</div>						
 					</div>
 				
 					<?php endwhile;?>

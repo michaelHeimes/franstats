@@ -37,17 +37,17 @@ $video_url = get_field('video_url') ?: '';
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 	<div class="bg" style="background-image: url(<?php echo $bg_img;?>);"></div>
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x">
+		<div class="grid-x grid-padding-x align-middle">
 			
-			<div class="left cell small-12 medium-6">
+			<div class="left cell small-12 xmedium-6 large-5">
 				<h1><?php echo $heading; ?></h1>
 				<p><?php echo $text; ?></p>
 				<div class="btn-wrap">
-					<button type="button" class="button light-gray" data-open="try-modal"><?php echo $modal_text;?></button>
+					<button type="button" class="button white" data-open="try-modal"><?php echo $modal_text;?></button>
 				</div>
 			</div>
 			
-			<div class="right cell small-12 medium-6">
+			<div class="right cell small-12 xmedium-6 large-offset-1">
 				<button href="#" data-open="<?php echo esc_attr($id); ?>-video">
 					<img src="<?php echo esc_url($video_thumb['url']); ?>" alt="<?php echo esc_attr($video_thumb['alt']); ?>" />
 				</button>

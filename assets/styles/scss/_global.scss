@@ -7,6 +7,12 @@ Stylesheet: Global Stylesheet
 /*********************
 COMMON ELEMENTS
 *********************/
+.wp-block-columns {
+	padding-top: 2.8125rem;
+	padding-bottom: 2.8125rem;	
+	margin-bottom: 0;
+}
+
 .has-bg {
 	position: relative;
 	
@@ -29,7 +35,34 @@ COMMON ELEMENTS
 button,
 .button {
 	font-weight: bold;
+	text-transform: uppercase;	
+}
+
+button:not(.slick-arrow):not(.wp-switch-editor):not(.cta-bar button):not(.slick-dots button):not(.close-button),
+.button {
+
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+	
+&.white {
+	background-color: $white;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+	font-weight: bold;
+	font-size: rem-calc(26);
+	line-height: 1.346;
 	text-transform: uppercase;
+	padding: .558em 1.509em;
+}
+	
+}
+
+.anchor-link {
+	position: relative;
+	top: -130px;	
+	
+	@include breakpoint(medium) {
+		top: -150px;
+	}
+	
 }
 
 /*********************
@@ -47,6 +80,10 @@ h2,
 	text-transform: uppercase;
 }
 
+p,
+.p {
+	font-size: rem-calc(20);	
+}
 
 /*********************
 POSTS & CONTENT STYLES

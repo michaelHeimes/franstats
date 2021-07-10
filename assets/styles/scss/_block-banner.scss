@@ -1,0 +1,40 @@
+.banner {
+	padding-top: 1.7rem;
+	padding-bottom: 1.85rem;
+	
+	@include breakpoint (medium) {
+		padding-top: 6.35rem;
+		padding-bottom: 5.2rem;
+	}
+	
+	.left {
+		margin-bottom: .85rem;
+		@include breakpoint (xmedium) {
+			margin-bottom: 0;
+		}
+		
+		h1 {
+			margin-bottom: .6em;
+			
+			@include breakpoint (xmedium) {
+				margin-bottom: .9em;
+			}
+			
+		}
+		
+		.btn-wrap {
+			text-align: center;
+			padding-top: .7rem;
+				@include breakpoint (xmedium) {
+					text-align: left;
+					padding-top: 1.45rem;
+				}
+		}
+		
+	}
+	
+	.right {
+		
+	}
+	
+}

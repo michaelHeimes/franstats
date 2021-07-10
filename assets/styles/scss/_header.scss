@@ -1,18 +1,75 @@
 header.header {
+	padding: 1.333rem 0;
+	transition: transform .5s ease;
+	
+	background-color: $white;
+	
+	.top-bar .top-bar-left,
+	.top-bar .top-bar-right {
+		flex: 0 1 auto;
+	}
+	
 	.top-bar {
 		.top-bar-left {
+			
+			a#menu-toggle {
+				padding: 0;
+				display: block;
+				margin-right: 10px;
+			}
+			
 			li.header-logo {
 				a {
+					max-width: 108px;
 					padding: 0;
+					
+					@include breakpoint(medium) {
+						max-width: 100%;
+					}
+					
 				}
 			}
 		}
 		.top-bar-right {
 			.utility-nav {
+				text-align: right;
+				
 				a {
 					color: $black;
+					text-transform: uppercase;
+				
+				&.sign-in {
+					text-decoration: underline;
+				}
+					
 				}
 			}
+			
+			#main-nav {
+				align-items: center;
+				padding: .5rem 0 0;
+				justify-content: flex-end;
+				
+				@include breakpoint(medium) {
+					justify-content: flex-start;
+				}
+				
+				li {
+					
+				&:not(.nav-button) {
+					a {
+						padding: .2rem;
+						text-transform: uppercase;
+						font-weight: bold;
+						color: $black;
+						margin-right: 2.9rem;
+					}
+				}
+				
+				}
+			
+			}
+			
 		}
 	}
 }

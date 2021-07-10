@@ -3,6 +3,25 @@
     "title": "Block: Price Cards",
     "fields": [
         {
+            "key": "field_60e99b0e9782d",
+            "label": "ID For Anchor Link",
+            "name": "anchor",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60e790b56ae3b",
             "label": "Heading",
             "name": "heading",
@@ -59,7 +78,7 @@
                             "key": "field_60e7911a6ae3e",
                             "label": "Title",
                             "name": "title",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -70,9 +89,9 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_60e791276ae3f",
@@ -191,5 +210,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625791513
+    "modified": 1625922497
 }

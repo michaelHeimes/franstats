@@ -1,0 +1,52 @@
+.faqs {
+	padding-top: 1.1rem;
+	padding-bottom: 1.45rem;
+	
+	@include breakpoint(medium) {
+		padding-bottom: 2.6rem;
+	}
+	
+	h2 {
+		padding-top: 1rem;
+	}
+	
+	.right {
+		
+		@include breakpoint(xlarge) {
+			.inner {
+				margin-right: -6.75rem;
+			}
+		}
+	
+		.accordion {
+			li.accordion-item {
+				a {
+					position: relative;
+					font-weight: 600;
+					
+				&:focus {
+					color: $black;
+				}
+					
+				&:before {
+					display: block;
+					content: url(../images/accordion-arrow.svg);
+					position: absolute;
+				    left: 0;
+				    right: auto;
+				    margin: 0;
+				    top: 1rem;
+				    transition: transform .3s ease;
+				}
+				
+				&[aria-expanded="true"]:before {
+					transform: rotateX(180deg);
+				}
+					
+				}
+			}
+		}
+		
+	}
+	
+}
