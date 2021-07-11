@@ -1,11 +1,16 @@
 .brands-slider {
 	padding-top: 2.21875rem;
 	padding-bottom: 2.21875rem;
-	
+		
 	.brand-slider {
+		display: none;		
 		padding-top: 1.5rem;
 		padding-left: 1rem;
 		padding-right: 1rem;
+		
+	&.slick-initialized {
+		display: block;
+	}
 		
 		@include breakpoint(large) {
 			padding-left: 0;
@@ -14,13 +19,19 @@
 		
 		button.slick-arrow {
 // 			font-size: 0;
-			width: 13px;
+			cursor: pointer;
+			width: 20px;
 			height: 30px;
 		    position: absolute;
 		    z-index: 2;
 		    top: 50%;
 		    transform: translateY(-50%);
 			background-repeat: no-repeat;
+			transition: opacity .3s ease;
+			
+		&:hover {
+			opacity: .6;
+		}
 
 		&.slick-prev {
 			left: 0;
@@ -28,6 +39,11 @@
 			@include breakpoint(large) {
 				left: -1rem;
 			}
+			
+			@include breakpoint(xlarge) {
+				left: -2rem;
+			}
+			
 		}
 		    
 		&.slick-next {
@@ -35,6 +51,10 @@
 			
 			@include breakpoint(large) {
 				right: -1rem;
+			}
+
+			@include breakpoint(xlarge) {
+				right: -2rem;
 			}
 			
 		}

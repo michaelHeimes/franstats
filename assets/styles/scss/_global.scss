@@ -38,7 +38,7 @@ button,
 	text-transform: uppercase;	
 }
 
-button:not(.slick-arrow):not(.wp-switch-editor):not(.cta-bar button):not(.slick-dots button):not(.close-button),
+button:not(.slick-arrow):not(.wp-switch-editor):not(.cta-bar button):not(.close-button),
 .button {
 
 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
@@ -51,8 +51,18 @@ button:not(.slick-arrow):not(.wp-switch-editor):not(.cta-bar button):not(.slick-
 	line-height: 1.346;
 	text-transform: uppercase;
 	padding: .558em 1.509em;
+	
+	&:hover {
+		background-color: $light-gray;
+	}
+	
 }
 	
+}
+
+.slide-m-dots button,
+button.cta-button {
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
 }
 
 .anchor-link {

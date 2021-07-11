@@ -19,8 +19,13 @@
 	}
 	
 	.testimonial-slider {
+		display: none;
+		
+	&.slick-initialized {
+		display: block;
+	}
+		
 		.slick-list {
-			
 			
 			.single-slide {
 				border: 1px solid #CCCCCC;
@@ -54,7 +59,15 @@
 	    align-items: center;
 	    
 	    .slick-arrow {
+		    cursor: pointer;
 		    margin-top: 2px;
+		    width: 20px;
+		    transition: opacity .3s ease;
+		    
+		&:hover {
+			opacity: .6;
+		}
+		    
 	    }
 	    
 	    .slide-m-dots {
@@ -62,7 +75,7 @@
 		    ul.slick-dots {
 				list-style: none;
 				margin: 0;
-				padding: 0 1rem;
+				padding: 0 .5rem;
 			    font-size: 0;
 			    display: flex;
 			    justify-content: center;
@@ -70,12 +83,20 @@
 			    
 			    li {
 				    margin: 5px;
+				    
 				    button {
 					    width: 18px;
 					    height: 18px;
 					    border: 1px solid $brand-secondary;
 					    background-color: $brand-secondary;
 					    border-radius: 100%;
+					    cursor: pointer;
+					    transition: background-color .3s ease;
+					    
+					    &:hover {
+							background-color: scale-color($brand-secondary, $lightness: -15%);
+					    }
+					    
 				    }
 				    
 				&.slick-active {

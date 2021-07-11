@@ -36,7 +36,7 @@ $text_size = get_field('text_size') ?: '';
 				
 				<div class="cell small-12 text-center">
 					
-					<button type="button" class="text-center" data-open="try-modal"><span><?php echo $button_text;?></span></button>
+					<button type="button" class="text-center cta-button" data-open="try-modal"><span><?php echo $button_text;?></span></button>
 					
 				</div>
 	

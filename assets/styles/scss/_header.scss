@@ -73,3 +73,27 @@ header.header {
 		}
 	}
 }
+
+ul.util-nav {
+	padding-top: 1rem;
+}
+
+ul.util-nav,
+ul#offcanvas-nav {
+	li {
+	&:not(.nav-button) {
+		a {
+			padding: .5rem 1rem;
+			margin: .3rem 0;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $black;
+			margin-right: 2.9rem;
+		}
+	}
+	&.nav-button {
+		width: calc(100% - 2rem);
+		margin: 1rem auto 0;
+	}
+	}
+}

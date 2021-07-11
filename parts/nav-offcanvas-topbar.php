@@ -19,7 +19,7 @@
 				<?php 
 				$image = get_field('header_logo', 'option');
 				if( !empty( $image ) ): ?>
-				    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+				    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="franstats logo">
 				<?php endif; ?>
 			</a></li>
 		</ul>
