@@ -28,7 +28,7 @@ const SOURCE = {
 		FOUNDATION + '/dist/js/plugins/foundation.util.*.js',
 
 		// Pick the components you need in your project
-		FOUNDATION + '/dist/js/plugins/foundation.abide.js',
+// 		FOUNDATION + '/dist/js/plugins/foundation.abide.js',
 		FOUNDATION + '/dist/js/plugins/foundation.accordion.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.accordionMenu.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.drilldown.js',
@@ -42,7 +42,7 @@ const SOURCE = {
 // 		FOUNDATION + '/dist/js/plugins/foundation.responsiveToggle.js',
 		FOUNDATION + '/dist/js/plugins/foundation.reveal.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.slider.js',
-		FOUNDATION + '/dist/js/plugins/foundation.smoothScroll.js',
+// 		FOUNDATION + '/dist/js/plugins/foundation.smoothScroll.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
 		FOUNDATION + '/dist/js/plugins/foundation.sticky.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.tabs.js',

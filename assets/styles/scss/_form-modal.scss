@@ -1,4 +1,9 @@
 .form-modal {
+	padding: 2.05rem 1.25rem .5rem;
+	
+	@include breakpoint(medium) {
+		padding: 2.05rem 2.95rem .5rem;
+	}
 	
 	h1 {
 		margin-bottom: 0.8em;
@@ -16,7 +21,12 @@
 	.name_last,
 	.gfield {
 		position: relative;
-		margin-top: 2.555rem;
+		margin-top: 1.555rem;
+		
+		@include breakpoint(medium) {
+			margin-top: 2.555rem;
+		}
+		
 	}
 	
 	.gform_wrapper.gravity-theme .ginput_complex label,
@@ -29,6 +39,16 @@
 		margin: 0;
 		transform: translate(22px, 51px);
 		transition: all .2s ease;
+	}
+	
+	.gform_wrapper.gravity-theme .gfield_error .gfield_label {
+	    bottom: 111px;
+	}
+	
+	.gform_wrapper .gfield_required {
+		font-size: 26px;
+	    position: relative;
+	    top: -1px;
 	}
 	
 	[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {

@@ -36,6 +36,13 @@ button,
 .button {
 	font-weight: bold;
 	text-transform: uppercase;	
+	
+/*
+&:focus {
+	outline: 1px solid $brand-primary;
+}
+*/
+	
 }
 
 button:not(.slick-arrow):not(.wp-switch-editor):not(.cta-bar button):not(.close-button),

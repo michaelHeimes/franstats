@@ -26,8 +26,7 @@ get_header(); ?>
 
 	</div> <!-- end #content -->
 	
-
-	<div class="reveal form-modal" id="try-modal" data-reveal data-animation-in="fade" data-animation-out="fade">
+	<div class="reveal form-modal" id="try-modal" data-reveal data-animation-in="fade" >
 		
 		<h1 class="text-center"><?php the_field('form_heading', 'option');?></h1>
 		

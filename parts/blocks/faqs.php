@@ -44,7 +44,7 @@ $anchor_link = get_field('anchor') ?: '';
 				<div class="inner">
 								
 					<?php if( have_rows('faqs') ):?>
-					<ul class="accordion" data-accordion>
+					<ul class="accordion" data-accordion data-allow-all-closed="true">
 						<?php while ( have_rows('faqs') ) : the_row();?>	
 						
 						<?php if( have_rows('single_faq') ):?>

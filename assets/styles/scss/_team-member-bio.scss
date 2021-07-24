@@ -13,13 +13,14 @@
 		background: linear-gradient(180deg, #A5CEE9 0%, #AEDEFA 50%);
 		
 		.img-wrap {
-			max-width: 320px;
+			max-width: 160px;
 			border: 3px solid $brand-secondary;
 			border-radius: 100%;
 			overflow: hidden;
 			margin: -4.9rem auto 2.55rem;
 			
 			@include breakpoint(medium) {
+				max-width: 320px;
 				margin: -3.75rem  0 0;
 			}
 			

@@ -7,6 +7,10 @@
 		padding-bottom: 2.8125rem;
 	}
 	
+	.grid-container {
+		max-width: 67rem;
+	}
+	
 	h2 {
 		margin-bottom: .75em;
 		
@@ -17,6 +21,15 @@
 			font-size: rem-calc(26);
 			font-weight: 400;
 			text-transform: none;
+			
+		&:first-child {
+			padding-bottom: .1em;
+		}
+			
+		}
+		
+		&.large {
+			padding-bottom: .15em;
 		}
 			
 		}
@@ -30,6 +43,12 @@
 			margin-bottom: 0;
 		}
 		
+	}
+	
+	.right {
+		@include breakpoint(large) {
+			padding-left: 2rem;
+		}
 	}
 	
 }

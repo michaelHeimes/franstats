@@ -38,7 +38,8 @@
 	
 // 	Block Hacks
 	$('.wp-block-button__link').addClass('button');
-	$('.wp-block-columns').addClass('grid-container');
+	$( '.wp-block-columns' ).wrap( "<div class='grid-container'><div class='grid-x grid-padding-x'><div class='cell small-12'></div>" );	
+	$( ".entry-content > p" ).wrap( "<div class='grid-container'><div class='grid-x grid-padding-x'><div class='cell small-12'></div>" );
 	
 // 	WP Menu Link Buttons Hack
 	$('li.nav-button').find('a').addClass('button');
@@ -48,12 +49,15 @@
 	$('li.open-try-modal').find('a').attr('data-open', 'try-modal');
 	$('a.open-try-modal').data('try-modal');
 	
+// 	Field label animations
 	$('.gform_fields .ginput_container:not(.has_first_name) input').focus(function() {
 		$(this).closest('.gfield').addClass('focused');
 	});
 	
 	$('.gform_fields .ginput_container:not(.has_first_name) input').blur(function() {
-		$(this).closest('.gfield').removeClass('focused');
+		if( !this.value ) {
+			$(this).closest('.gfield').removeClass('focused');
+		}
 	});
 	
 	$('.has_first_name.no_middle_name.has_last_name input').focus(function() {
@@ -61,10 +65,11 @@
 	});
 	
 	$('.has_first_name.no_middle_name.has_last_name input').blur(function() {
-		$(this).closest('span').removeClass('focused');
+		if( !this.value ) {
+			$(this).closest('span').removeClass('focused');
+		}
 	});	
 
-	
 // 	Logo Slider
 	if ( $('.brand-slider').length ) {
 		
@@ -127,7 +132,7 @@
 			autoplay: false,
 			autoplaySpeed: 2000,
 			dots:true,
-			arrows: false,
+			arrows: true,
 			rows: 0,
 			fade: true,
 			appendDots: $(".slide-m-dots"),
