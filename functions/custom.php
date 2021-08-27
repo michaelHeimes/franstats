@@ -36,7 +36,7 @@ function my_acf_json_load_point( $paths ) {
     
     
     // append path
-    $paths[] = get_stylesheet_directory() . '/my-custom-folder';
+    $paths[] = get_stylesheet_directory() . '/acf-json';
     
     
     // return
